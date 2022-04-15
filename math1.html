@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Calculation</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body>
+    
+    <div class="container bg-info rounded" style="height: 800px; padding: 50px;margin-top: 50px;">
+
+        <div class="row p-5" style="margin-top: 50px;">
+
+            <div class="col-lg-6">
+                <label class="text-white" for="">Enter first Number:</label>
+                <input type="number" id="no1">
+            </div>
+
+            <div class="col-lg-6">
+                <label class="text-white" for="">Enter first Number:</label>
+                <input type="number" id="no2">
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-3">
+                <button class="btn btn-dark" onclick="add()">ADDITION</button>
+            </div>
+
+            <div class="col-lg-3">
+                <button class="btn btn-dark" onclick="sub()">SUBSTRACTION</button>
+            </div>
+
+            <div class="col-lg-3">
+                <button class="btn btn-dark" onclick="mult()">MULTIPLICATION</button>
+            </div>
+
+            <div class="col-lg-3">
+                <button class="btn btn-dark" onclick="divi()">DIVISION</button>
+            </div>
+        </div>
+       
+        
+
+            <h1 id="add1"></h1>
+            <h1 id="sub1"></h1>
+            <h1 id="mult1"></h1>
+            <h1 id="divi1"></h1>
+
+
+    </div>
+
+    <!-- JS -->
+
+    <script>
+
+        function add()
+        {
+            var ctrl=document.getElementById("no1");
+            var no1=Number(ctrl.value);
+            var ctrl1=document.getElementById("no2");
+            var no2=Number(ctrl1.value);
+            var add=no1+no2;
+            
+            var add1=document.getElementById("add1");
+            add1.innerText=("Addition is "+ add);
+         }
+
+         function sub()
+        {
+            var ctrl=document.getElementById("no1");
+            var no1=ctrl.value;
+            var ctrl1=document.getElementById("no2");
+            var no2=ctrl1.value;
+            var sub=no1-no2;
+
+            var sub1=document.getElementById("sub1");
+            sub1.innerText="Substraction is "+ sub;
+          
+         }
+
+         function mult()
+        {
+            var ctrl=document.getElementById("no1");
+            var no1=ctrl.value;
+            var ctrl1=document.getElementById("no2");
+            var no2=ctrl1.value;
+            var mult=no1*no2;
+
+            var mult1=document.getElementById("mult1");
+            mult1.innerText="Multiplication is "+ mult;
+         }
+
+         function divi()
+        {
+            var ctrl=document.getElementById("no1");
+            var no1=ctrl.value;
+            var ctrl1=document.getElementById("no2");
+            var no2=ctrl1.value;
+            var divi=no1/no2;
+
+            var divi1=document.getElementById("divi1");
+            divi1.innerText="Division is "+ divi;
+         }
+
+    </script>
+
+</body>
+</html>
